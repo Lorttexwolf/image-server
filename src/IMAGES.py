@@ -8,6 +8,9 @@ IMAGE_CONFIG = {
         "categories": ["Free Backgrounds"],
         "exclude_from_all_backgrounds": False,
         "paths": {
+            "card": {
+                "whole": "assets/backgrounds/card/whole/breezy_meadows.png"
+            },
             "getinfo": {
                 "whole": "assets/backgrounds/getinfo/whole/breezy_meadows.png",
                 "front": "assets/backgrounds/getinfo/front/breezy_meadows.png",
@@ -204,6 +207,9 @@ IMAGE_CONFIG = {
         "exclude_from_all_backgrounds": False,
         "on_buy_message": "This background can be acquired by purchasing any of our [hoodies](<https://shop.blox.link/collections/hoodies>)! You will get a special code that will unlock this background.",
         "paths": {
+            "card": {
+                "whole": "assets/backgrounds/card/whole/merch_storm.png"  
+            },
             "getinfo": {
                 "whole": "assets/backgrounds/getinfo/whole/merch_storm.png",
                 "front": "assets/backgrounds/getinfo/front/merch_storm.png",
