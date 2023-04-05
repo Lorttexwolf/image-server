@@ -3,7 +3,7 @@ from PIL import Image, ImageFont, ImageDraw, UnidentifiedImageError, ImageOps, I
 from io import BytesIO
 from config import DEFAULT_GETINFO_BACKGROUND, ERROR_WEBHOOK, DEBUG_MODE
 from IMAGES import IMAGE_CONFIG
-from typing import Tuple, List
+from typing import Optional, Tuple, List
 from utils.text_wrap import TextWrapper
 from utils.text_cleanse import cleanse
 import aiohttp
@@ -23,15 +23,19 @@ class Route:
     PATH = "/card"
     METHODS = ("GET", )
     
-    AVATAR_SIZE = (1100, 1100)
-    AVATAR_POSITION = (-190, 30)
+    AVATAR_SIZE = (888, 888)
+    AVATAR_POSITION = (-90, 25)
 
     def __init__(self):
         self.header1 = ImageFont.truetype("fonts/TovariSans.ttf", 35)
+        self.header2 = ImageFont.truetype("fonts/TovariSans.ttf", 80)
         self.bloxlink_head_image = Image.open("assets/clear_logo.png").resize((100, 150))
-        self.session = aiohttp.ClientSession()
+        self.session: aiohttp.ClientSession = None
 
     async def handler(self, request):
+        if self.session == None:
+            self.session = aiohttp.ClientSession()
+        
         json_data: dict = request.json
         background_name = json_data.get("background")
         background_name = background_name if background_name and IMAGE_CONFIG.get(background_name, {}).get("paths", {}).get("card", {}).get("whole") else DEFAULT_GETINFO_BACKGROUND
@@ -42,6 +46,9 @@ class Route:
         
         background_config = IMAGE_CONFIG[background_name]
         background_path = background_config["paths"]["card"]["whole"]
+        
+        has_prop_outline = background_config.get("props", {}).get("card", {}).get("outline", False)
+        
         # background_props = background_config.get("props", ("moon.png", "HEADSHOT", "BACKGROUND", "moon_outline.png"))
         # background_hexes = background_config.get("hexes", {})
 
@@ -59,21 +66,31 @@ class Route:
                         try:
                             data = BytesIO(await resp.read())
                             avatar_image  = Image.open(data)
-                            shadow_avatar = make_shadow(avatar_image)
-                        except UnidentifiedImageError:
+                            shadow_avatar: Optional[Image.Image] = None
+                            if has_prop_outline:
+                                shadow_avatar = make_shadow(avatar_image)       
+                                                     
+                        except UnidentifiedImageError as ex:
+                            logging.error(ex)
                             pass 
-                        else:                        
+                        else:
+                            shadow_scalar = 2
+                            
                             # Resize the avatar image to fit our needs.
-                            shadow_headshot = shadow_avatar.resize((self.AVATAR_SIZE[0] + 26, self.AVATAR_SIZE[1] + 26))
-                            headshot_image = avatar_image.resize(self.AVATAR_SIZE)
+                            if shadow_avatar:
+                                shadow_avatar = shadow_avatar.resize((self.AVATAR_SIZE[0] + 10 * shadow_scalar, self.AVATAR_SIZE[1] + 5 * shadow_scalar))
+                            avatar_image = avatar_image.resize(self.AVATAR_SIZE)
                                                                             
                             # Paste the avatar and shadow image.
-                            image.paste(shadow_headshot, (self.AVATAR_POSITION[0] - 12, self.AVATAR_POSITION[1] - 8), shadow_headshot)
-                            image.paste(headshot_image, self.AVATAR_POSITION, headshot_image)
+                            if shadow_avatar:
+                                image.paste(shadow_avatar, (self.AVATAR_POSITION[0] - 5 * shadow_scalar, self.AVATAR_POSITION[1] - 5), shadow_avatar)
+                                # image.paste(shadow_avatar, (self.AVATAR_POSITION[0] + 200, self.AVATAR_POSITION[1] - 14), shadow_avatar)
+                            image.paste(avatar_image, self.AVATAR_POSITION, avatar_image)
                             
                             # Dispose of the data related to the images to prevent leaks.
-                            headshot_image.close()
-                            shadow_headshot.close()
+                            avatar_image.close()
+                            if shadow_avatar:
+                                shadow_avatar.close()
                         
                 # TODO: Create card overlays
                 # if overlay:
@@ -84,7 +101,7 @@ class Route:
                 draw = ImageDraw.Draw(image)
                 if joined_at:
                     draw.text((1280, 52), f"Joined {joined_at.strftime(f'%m/%d/%Y')}", (140, 140, 140), align="right", font=self.header1)
-
+                
             with BytesIO() as bf:
                 image.save(bf, "PNG", quality=70)
                 image.seek(0)

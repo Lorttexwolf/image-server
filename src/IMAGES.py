@@ -219,6 +219,11 @@ IMAGE_CONFIG = {
                 "whole": "assets/backgrounds/verify/whole/merch_storm.png",
                 "front": "assets/backgrounds/verify/front/merch_storm.png",
             }
+        },
+        "props": {
+            "card": {
+                "outline": True
+            }
         }
     },
     "sweet_tooth": {
