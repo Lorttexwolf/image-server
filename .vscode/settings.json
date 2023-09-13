@@ -1,0 +1,25 @@
+{
+    "editor.formatOnSave": true,
+    "python.languageServer": "Pylance",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/__pycache__/": true,
+        ".mypy_cache": true
+    },
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.inlayHints.pytestParameters": true,
+    "black-formatter.args": [
+        "-l",
+        "110"
+    ],
+    "isort.args": [
+        "--profile=black"
+    ],
+    "python.analysis.typeCheckingMode": "basic",
+}
