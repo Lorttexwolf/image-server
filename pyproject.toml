@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "image-server"
+version = "1.0.0"
+description = ""
+authors = ["Bloxlink admin@blox.link"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aiodns = "^3.0.0"
+sanic = "^23.6.0"
+Pillow = "^10.0.0"
+aiohttp = "^3.8.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

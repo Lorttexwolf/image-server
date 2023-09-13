@@ -1,11 +1,12 @@
-FROM python:3.8.1
+FROM python:3.11.5
 
 WORKDIR /usr/src/bloxlink-image-server
 
 ADD . /usr/src/bloxlink-image-server
 
-RUN pip3 install --trusted-host pypi.python.org -r requirements.txt
+RUN pip3 install "poetry==1.6.1"
+RUN poetry install
 
 EXPOSE 8001
 
-ENTRYPOINT ["python3", "src/main.py"]
+ENTRYPOINT [ "poetry", "run", "python", "src/main.py" ]
