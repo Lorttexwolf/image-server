@@ -8,22 +8,18 @@ IMAGE_CONFIG = {
         "categories": ["Free Backgrounds"],
         "exclude_from_all_backgrounds": False,
         "paths": {
-            "card": {
-                "whole": "assets/backgrounds/card/whole/breezy_meadows.png"
-            },
+            "card": {"whole": "assets/backgrounds/card/whole/breezy_meadows.png"},
             "getinfo": {
                 "whole": "assets/backgrounds/getinfo/whole/breezy_meadows.png",
                 "front": "assets/backgrounds/getinfo/front/breezy_meadows.png",
-                "back": "assets/backgrounds/getinfo/back/breezy_meadows.png"
+                "back": "assets/backgrounds/getinfo/back/breezy_meadows.png",
             },
             "verify": {
                 "whole": "assets/backgrounds/verify/whole/breezy_meadows.png",
                 "front": "assets/backgrounds/verify/front/breezy_meadows.png",
-            }
+            },
         },
-        "hexes": {
-            "primary_color": (193, 93, 93)
-        }
+        "hexes": {"primary_color": (193, 93, 93)},
     },
     "deep_seas": {
         "name": "Deep Seas",
@@ -33,16 +29,17 @@ IMAGE_CONFIG = {
         "categories": ["Free Backgrounds"],
         "exclude_from_all_backgrounds": False,
         "paths": {
+            "card": {"whole": "assets/backgrounds/card/whole/deep_seas.png"},
             "getinfo": {
                 "whole": "assets/backgrounds/getinfo/whole/deep_seas.png",
                 "front": "assets/backgrounds/getinfo/front/deep_seas.png",
-                "back": "assets/backgrounds/getinfo/back/deep_seas.png"
+                "back": "assets/backgrounds/getinfo/back/deep_seas.png",
             },
             "verify": {
                 "whole": "assets/backgrounds/verify/whole/deep_seas.png",
                 "front": "assets/backgrounds/verify/front/deep_seas.png",
-            }
-        }
+            },
+        },
     },
     "free_purple": {
         "name": "Purple Bloxlink Buddy",
@@ -55,9 +52,9 @@ IMAGE_CONFIG = {
             "getinfo": {
                 "whole": "assets/backgrounds/getinfo/whole/bloxlink/free_purple.png",
                 "front": "assets/backgrounds/getinfo/front/bloxlink/free_purple.png",
-                "back": "assets/backgrounds/getinfo/back/bloxlink/free_purple.png"
+                "back": "assets/backgrounds/getinfo/back/bloxlink/free_purple.png",
             }
-        }
+        },
     },
     "free_orange": {
         "name": "Orange Bloxlink Buddy",
@@ -70,9 +67,9 @@ IMAGE_CONFIG = {
             "getinfo": {
                 "whole": "assets/backgrounds/getinfo/whole/bloxlink/free_orange.png",
                 "front": "assets/backgrounds/getinfo/front/bloxlink/free_orange.png",
-                "back": "assets/backgrounds/getinfo/back/bloxlink/free_orange.png"
+                "back": "assets/backgrounds/getinfo/back/bloxlink/free_orange.png",
             }
-        }
+        },
     },
     "free_red": {
         "name": "Red Bloxlink Buddy",
@@ -85,9 +82,9 @@ IMAGE_CONFIG = {
             "getinfo": {
                 "whole": "assets/backgrounds/getinfo/whole/bloxlink/free_red.png",
                 "front": "assets/backgrounds/getinfo/front/bloxlink/free_red.png",
-                "back": "assets/backgrounds/getinfo/back/bloxlink/free_red.png"
+                "back": "assets/backgrounds/getinfo/back/bloxlink/free_red.png",
             }
-        }
+        },
     },
     "cupid_valentine": {
         "name": "Cupid's Valentine - LIMITED TIME FOR SALE",
@@ -96,26 +93,25 @@ IMAGE_CONFIG = {
         "categories": ["Limited Time"],
         "exclude_from_all_backgrounds": False,
         "paths": {
+            "card": {"whole": "assets/backgrounds/card/whole/cupid_valentine.png"},
             "getinfo": {
                 "whole": "assets/backgrounds/getinfo/whole/cupid_valentine.png",
                 "front": "assets/backgrounds/getinfo/front/cupid_valentine.png",
-                "back": "assets/backgrounds/getinfo/back/cupid_valentine.png"
+                "back": "assets/backgrounds/getinfo/back/cupid_valentine.png",
             },
             "verify": {
                 "whole": "assets/backgrounds/verify/whole/cupid_valentine.png",
                 "front": "assets/backgrounds/verify/front/cupid_valentine.png",
-            }
+            },
         },
         "props": (
             {"getinfo": "heart.png", "verify": "bigger_moon.png"},
-            {"getinfo": ("HEADSHOT",  (160, 100)), "verify": ("HEADSHOT", (90, 50))},
+            {"getinfo": ("HEADSHOT", (160, 100)), "verify": ("HEADSHOT", (90, 50))},
             "BACKGROUND",
             {"getinfo": "wings.png"},
             {"getinfo": "heart_outline.png", "verify": "bigger_moon_outline.png"},
         ),
-        "hexes": {
-            "primary_color": (139, 60, 240)
-        }
+        "hexes": {"primary_color": (139, 60, 240)},
     },
     "frosty_winterland": {
         "name": "Frosty Winterland - LIMITED TIME FOR SALE",
@@ -124,16 +120,17 @@ IMAGE_CONFIG = {
         "categories": ["Limited Time"],
         "exclude_from_all_backgrounds": False,
         "paths": {
+            "card": {"whole": "assets/backgrounds/card/whole/frosty_winterland.png"},
             "getinfo": {
                 "whole": "assets/backgrounds/getinfo/whole/frosty_winterland.png",
                 "front": "assets/backgrounds/getinfo/front/frosty_winterland.png",
-                "back": "assets/backgrounds/getinfo/back/frosty_winterland.png"
+                "back": "assets/backgrounds/getinfo/back/frosty_winterland.png",
             },
             "verify": {
                 "whole": "assets/backgrounds/verify/whole/frosty_winterland.png",
                 "front": "assets/backgrounds/verify/front/frosty_winterland.png",
-            }
-        }
+            },
+        },
     },
     "raging_volcano": {
         "name": "Raging Volcano",
@@ -142,25 +139,23 @@ IMAGE_CONFIG = {
         "categories": [],
         "exclude_from_all_backgrounds": False,
         "paths": {
+            "card": {"whole": "assets/backgrounds/card/whole/raging_volcano.png"},
             "getinfo": {
                 "whole": "assets/backgrounds/getinfo/whole/raging_volcano.png",
                 "front": "assets/backgrounds/getinfo/front/raging_volcano.png",
-                "back": "assets/backgrounds/getinfo/back/raging_volcano.png"
+                "back": "assets/backgrounds/getinfo/back/raging_volcano.png",
             },
             "verify": {
                 "whole": "assets/backgrounds/verify/whole/raging_volcano.png",
                 "front": "assets/backgrounds/verify/front/raging_volcano.png",
-            }
+            },
         },
         "props": (
             {"getinfo": "volcano_rock.png", "verify": "bigger_volcano_rock.png"},
             "HEADSHOT",
             "BACKGROUND",
-
         ),
-        "hexes": {
-            "primary_color": (203, 185, 179)
-        }
+        "hexes": {"primary_color": (203, 185, 179)},
     },
     "city_life": {
         "name": "That City Life",
@@ -169,16 +164,17 @@ IMAGE_CONFIG = {
         "categories": [],
         "exclude_from_all_backgrounds": False,
         "paths": {
+            "card": {"whole": "assets/backgrounds/card/whole/city_life.png"},
             "getinfo": {
                 "whole": "assets/backgrounds/getinfo/whole/city_life.png",
                 "front": "assets/backgrounds/getinfo/front/city_life.png",
-                "back": "assets/backgrounds/getinfo/back/city_life.png"
+                "back": "assets/backgrounds/getinfo/back/city_life.png",
             },
             "verify": {
                 "whole": "assets/backgrounds/verify/whole/city_life.png",
                 "front": "assets/backgrounds/verify/front/city_life.png",
-            }
-        }
+            },
+        },
     },
     "rainy_day": {
         "name": "Rainy Day",
@@ -187,16 +183,17 @@ IMAGE_CONFIG = {
         "categories": [],
         "exclude_from_all_backgrounds": False,
         "paths": {
+            "card": {"whole": "assets/backgrounds/card/whole/rainy_day.png"},
             "getinfo": {
                 "whole": "assets/backgrounds/getinfo/whole/rainy_day.png",
                 "front": "assets/backgrounds/getinfo/front/rainy_day.png",
-                "back": "assets/backgrounds/getinfo/back/rainy_day.png"
+                "back": "assets/backgrounds/getinfo/back/rainy_day.png",
             },
             "verify": {
                 "whole": "assets/backgrounds/verify/whole/rainy_day.png",
                 "front": "assets/backgrounds/verify/front/rainy_day.png",
-            }
-        }
+            },
+        },
     },
     "merch_storm": {
         "name": "Merch Storm",
@@ -207,24 +204,17 @@ IMAGE_CONFIG = {
         "exclude_from_all_backgrounds": False,
         "on_buy_message": "This background can be acquired by purchasing any of our [hoodies](<https://shop.blox.link/collections/hoodies>)! You will get a special code that will unlock this background.",
         "paths": {
-            "card": {
-                "whole": "assets/backgrounds/card/whole/merch_storm.png"  
-            },
+            "card": {"whole": "assets/backgrounds/card/whole/merch_storm.png"},
             "getinfo": {
                 "whole": "assets/backgrounds/getinfo/whole/merch_storm.png",
                 "front": "assets/backgrounds/getinfo/front/merch_storm.png",
-                "back": "assets/backgrounds/getinfo/back/merch_storm.png"
+                "back": "assets/backgrounds/getinfo/back/merch_storm.png",
             },
             "verify": {
                 "whole": "assets/backgrounds/verify/whole/merch_storm.png",
                 "front": "assets/backgrounds/verify/front/merch_storm.png",
-            }
+            },
         },
-        "props": {
-            "card": {
-                "outline": True
-            }
-        }
     },
     "sweet_tooth": {
         "name": "Sweet Tooth",
@@ -233,16 +223,17 @@ IMAGE_CONFIG = {
         "categories": [],
         "exclude_from_all_backgrounds": False,
         "paths": {
+            "card": {"whole": "assets/backgrounds/card/whole/sweet_tooth.png"},
             "getinfo": {
                 "whole": "assets/backgrounds/getinfo/whole/sweet_tooth.png",
                 "front": "assets/backgrounds/getinfo/front/sweet_tooth.png",
-                "back": "assets/backgrounds/getinfo/back/sweet_tooth.png"
+                "back": "assets/backgrounds/getinfo/back/sweet_tooth.png",
             },
             "verify": {
                 "whole": "assets/backgrounds/verify/whole/sweet_tooth.png",
                 "front": "assets/backgrounds/verify/front/sweet_tooth.png",
-            }
-        }
+            },
+        },
     },
     "starry_night": {
         "name": "Starry Night",
@@ -251,16 +242,17 @@ IMAGE_CONFIG = {
         "categories": [],
         "exclude_from_all_backgrounds": False,
         "paths": {
+            "card": {"whole": "assets/backgrounds/card/whole/starry_night.png"},
             "getinfo": {
                 "whole": "assets/backgrounds/getinfo/whole/starry_night.png",
                 "front": "assets/backgrounds/getinfo/front/starry_night.png",
-                "back": "assets/backgrounds/getinfo/back/starry_night.png"
+                "back": "assets/backgrounds/getinfo/back/starry_night.png",
             },
             "verify": {
                 "whole": "assets/backgrounds/verify/whole/starry_night.png",
                 "front": "assets/backgrounds/verify/front/starry_night.png",
-            }
-        }
+            },
+        },
     },
     "retro_gaming": {
         "name": "Retro Gaming",
@@ -269,16 +261,17 @@ IMAGE_CONFIG = {
         "categories": [],
         "exclude_from_all_backgrounds": False,
         "paths": {
+            "card": {"whole": "assets/backgrounds/card/whole/retro_gaming.png"},
             "getinfo": {
                 "whole": "assets/backgrounds/getinfo/whole/retro_gaming.png",
                 "front": "assets/backgrounds/getinfo/front/retro_gaming.png",
-                "back": "assets/backgrounds/getinfo/back/retro_gaming.png"
+                "back": "assets/backgrounds/getinfo/back/retro_gaming.png",
             },
             "verify": {
                 "whole": "assets/backgrounds/verify/whole/retro_gaming.png",
                 "front": "assets/backgrounds/verify/front/retro_gaming.png",
-            }
-        }
+            },
+        },
     },
     # SPECIALS
     "black": {
@@ -292,11 +285,10 @@ IMAGE_CONFIG = {
             "getinfo": {
                 "whole": "assets/backgrounds/getinfo/whole/black.png",
                 "front": "assets/backgrounds/getinfo/front/black.png",
-                "back": "assets/backgrounds/getinfo/back/black.png"
+                "back": "assets/backgrounds/getinfo/back/black.png",
             }
-        }
+        },
     },
-
     "runner": {
         "name": "Runner's Background",
         "acquirable": False,
@@ -308,10 +300,9 @@ IMAGE_CONFIG = {
             "getinfo": {
                 "whole": "assets/backgrounds/getinfo/whole/special/runner.png",
                 "front": "assets/backgrounds/getinfo/front/special/runner.png",
-                "back": "assets/backgrounds/getinfo/back/special/runner.png"
+                "back": "assets/backgrounds/getinfo/back/special/runner.png",
             }
         },
-        "unlocked": [115147252850360325, 84117866944663552, 398624891676524545]
+        "unlocked": [115147252850360325, 84117866944663552, 398624891676524545],
     },
 }
-
