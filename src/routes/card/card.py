@@ -66,7 +66,7 @@ class Route:
         background_config = IMAGE_CONFIG[background_name]
         background_path = background_config["paths"]["card"]["whole"]
 
-        has_prop_outline = background_config.get("props", {}).get("card", {}).get("outline", False)
+        # has_prop_outline = background_config.get("props", {}).get("card", {}).get("outline", False)
         # background_props = background_config.get("props", ("moon.png", "HEADSHOT", "BACKGROUND", "moon_outline.png"))
         # background_hexes = background_config.get("hexes", {})
 
@@ -85,8 +85,11 @@ class Route:
                             data = BytesIO(await resp.read())
                             avatar_image = Image.open(data)
                             shadow_avatar: Optional[Image.Image] = None
-                            if has_prop_outline:
-                                shadow_avatar = make_shadow(avatar_image)
+
+                            # if has_prop_outline:
+                            #     shadow_avatar = make_shadow(avatar_image)
+                            # TODO: Configure properly in card configurations (PREREQ: Fix schema).
+                            shadow_avatar = make_shadow(avatar_image)
 
                         except UnidentifiedImageError as ex:
                             logging.error(ex)
