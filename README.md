@@ -17,15 +17,21 @@ curl --location --request GET '{HOST}/card' \
 }'
 ```
 
-When requesting an image, you may specify different `background` images. You
+When requesting an image, you may specify different `background` images such as [breezy_meadows](assets/backgrounds/card/whole/breezy_meadows.png) and [merch_storm](assets/backgrounds/card/whole/merch_storm.png). You
 can view all images under [assets](assets) depending on the route.
 
 _See codebase to use other routes_.
 
 ## Development
 
-The Bloxlink image-server utilizes poetry to manage Python packages.
+The Bloxlink image-server utilizes poetry to manage Python packages along with the [Sanic Framework](https://sanic.dev/en/) to run the web server.
 
 ```sh
 poetry install && poetry run python src/main.py
 ```
+
+### 🚧 Incomplete Features
+
+- [ ] Card images are not configured with props nor do prop assets match card ratio.
+- [ ] Simplify and solidify [image configurations](src/IMAGES.py) schema along with functions to access configurations.
+- [ ] Revise codebase and integrate future libraries.
