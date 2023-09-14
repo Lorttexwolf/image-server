@@ -32,22 +32,16 @@ def register_routes(app, path=None):
                 )
 
 
-Sanic("BloxlinkImageServer")
+app = Sanic("BloxlinkImageServer")
+register_routes(app)
+app.register_middleware(auth, "request")
+app.static("/assets", "./assets")
+
 if __name__ == "__main__":
-    app = Sanic.get_app("BloxlinkImageServer", force_create=True)
-
-    register_routes(app)
-
-    app.register_middleware(auth, "request")
-
-    app.static("/assets", "./assets")
-
     app.run(
         SERVER_HOST,
         SERVER_PORT,
         fast=not DEBUG_MODE,
         debug=DEBUG_MODE,
         access_log=DEBUG_MODE,
-        # TODO: Not sure why - whenever multiple processes are being used routes aren't defined and throws.
-        single_process=True,
     )
